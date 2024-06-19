@@ -10,4 +10,5 @@ return {
   { import = "astrocommunity.motion.grapple-nvim" },
   { import = "astrocommunity.motion.nvim-surround" },
   { import = "astrocommunity.media.vim-wakatime" },
+  { import = "astrocommunity.programming-language-support.nvim-jqx" },
 }
