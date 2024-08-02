@@ -31,7 +31,7 @@ return {
         -- disable for eslint conflicts
         -- "tsserver",
       },
-      timeout_ms = 1000, -- default format timeout
+      timeout_ms = 2000, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
       --   return true
       -- end
@@ -91,11 +91,10 @@ return {
           desc = "Declaration of current symbol",
           cond = "textDocument/declaration",
         },
-        -- ["<Leader>uY"] = {
-        --   function() require("astrolsp.toggles").buffer_semantic_tokens() end,
-        --   desc = "Toggle LSP semantic highlight (buffer)",
-        --   cond = function(client) return client.server_capabilities.semanticTokensProvider and vim.lsp.semantic_tokens end,
-        -- },
+        ["<Leader>l<Leader>"] = {
+          function() vim.cmd [[ LspRestart ]] end,
+          desc = "Restart LSP",
+        },
       },
     },
     -- A custom `on_attach` function to be run after the default `on_attach` function
