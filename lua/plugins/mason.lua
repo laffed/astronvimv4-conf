@@ -9,8 +9,13 @@ return {
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
-        "lua_ls",
         -- add more arguments for adding more language servers
+        "biome",
+        "eslint",
+        "lua_ls",
+        "jsonls",
+        "tsserver",
+        "rust_analyzer",
       })
     end,
   },
@@ -24,6 +29,11 @@ return {
         "stylua",
         -- add more arguments for adding more null-ls sources
       })
+
+      opts.handlers = {
+        -- prevent biome init unless biome.json conf is present in wd
+        biome = function(source_name, methods) end,
+      }
     end,
   },
   {
