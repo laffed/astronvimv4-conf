@@ -5,7 +5,7 @@
       "devborder"
     ],
     "body": [
-      "// TODO: @laffed -- dev rm",
+      "// TODO: @johnk -- dev rm",
       "borderWidth: 1,",
       "borderColor: $1,"
     ]
