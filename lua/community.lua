@@ -12,5 +12,4 @@ return {
   { import = "astrocommunity.programming-language-support.nvim-jqx" },
   -- LSP Defaults
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.rust" },
 }
