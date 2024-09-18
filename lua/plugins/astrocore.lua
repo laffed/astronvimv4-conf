@@ -47,22 +47,22 @@ return {
 
         -- navigate buffer tabs with `H` and `L`
         L = {
-          function() require("astrocore.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
           desc = "Next buffer",
+          function() require("astrocore.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
         },
         H = {
-          function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
           desc = "Previous buffer",
+          function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
         },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
+          desc = "Pick to close",
           function()
             require("astroui.status.heirline").buffer_picker(
               function(bufnr) require("astrocore.buffer").close(bufnr) end
             )
           end,
-          desc = "Pick to close",
         },
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
@@ -73,6 +73,12 @@ return {
       t = {
         -- setting a mapping to false will disable it
         -- ["<esc>"] = false,
+      },
+      v = {
+        ["<Leader>j"] = {
+          desc = "jq sort keys",
+          ":!jq -S<CR>",
+        },
       },
     },
   },
