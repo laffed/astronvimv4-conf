@@ -23,7 +23,7 @@ return {
           settings = {
             ["rust-analyzer"] = {
               check = {
-                command = "check", -- or "clippy"
+                command = "clippy", -- or "check"
                 extraArgs = {
                   "--no-deps",
                 },

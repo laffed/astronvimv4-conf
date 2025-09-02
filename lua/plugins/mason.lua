@@ -14,8 +14,6 @@ return {
         "eslint",
         "lua_ls",
         "jsonls",
-        "tsserver",
-        "rust_analyzer",
       })
     end,
   },
